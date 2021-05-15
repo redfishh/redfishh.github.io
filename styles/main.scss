@@ -1,0 +1,130 @@
+// colours
+$orange: rgb(255, 165, 48);
+$citrus: rgb(255, 224, 184);
+$redOrange: rgb(255, 64, 0);
+$lightOrange: rgb(237, 165, 21);
+$white: white;
+$gray: rgb(92, 77, 61);
+
+// fonts
+$mainFont: 'Cabin';
+$headingFont: 'Bitter';
+
+// mixins
+@mixin header-style {
+  font-family: $headingFont;
+  margin: 1rem;
+}
+
+@mixin text-style {
+  line-height: 2rem;
+  margin: 1rem;
+}
+
+@mixin margins {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+@mixin noMargins {
+  margin: 0;
+  padding: 0;
+}
+
+// separate elements
+::selection {
+  background-color: $orange;
+  color: $white;
+}
+
+a {
+  @include text-style;
+  text-decoration: none;
+  color: $orange;
+
+  &:hover {
+    color: $citrus;
+    opacity: 0.75;
+  }
+}
+
+body {
+  font-family: $mainFont;
+  @include noMargins;
+}
+
+figcaption {
+  @include margins;
+  color: $gray;
+  font-size: 0.75rem;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1, h2 {
+  @include header-style;
+  color: $redOrange;
+}
+
+h3, h4 {
+  @include header-style;
+  color: $lightOrange;
+}
+
+img {
+  width: 85%;
+  @include margins;
+}
+
+p {
+  @include text-style;
+  max-width: 80%;
+}
+
+svg {
+  margin: 1rem;
+}
+
+// classes
+
+.box {
+  margin-bottom: 1rem;
+}
+
+.nav {
+  @include noMargins;
+  top: 0;
+  position: fixed;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  background-color: $white;
+
+  & a {
+    margin: 0;
+    padding: 1rem;
+    display: block;
+    text-align: center;
+    float: left;
+    background-color: $white;
+    color: $orange;
+  }
+
+  & .active, & a:hover {
+    background-color: $orange;
+    color: $white;
+  }
+}
+
+.project-container {
+  display: flex;
+
+  & a {
+    text-align: center;
+  }
+
+  & img {
+    // max-width: 20rem;
+    max-height: 25rem;
+  }
+}
