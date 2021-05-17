@@ -1,8 +1,9 @@
 // colours
-$orange: rgb(255, 165, 48);
+$orange: rgb(255, 135, 15);
 $citrus: rgb(255, 224, 184);
 $redOrange: rgb(255, 64, 0);
-$lightOrange: rgb(237, 165, 21);
+$lightOrange: rgb(255, 145, 61);
+$yellow: rgb(255, 203, 59);
 $white: white;
 $gray: rgb(92, 77, 61);
 
@@ -43,8 +44,8 @@ a {
   color: $orange;
 
   &:hover {
-    color: $citrus;
-    opacity: 0.75;
+    color: $yellow;
+    // opacity: 0.85;
   }
 }
 
@@ -73,12 +74,19 @@ h3, h4 {
 
 img {
   width: 85%;
+  object-fit: contain;
   @include margins;
 }
 
 p {
   @include text-style;
   max-width: 80%;
+
+  & em {
+    color: $orange;
+    font-weight: bold;
+    font-style: normal;
+  }
 }
 
 svg {
@@ -93,6 +101,7 @@ svg {
 
 .nav {
   @include noMargins;
+  z-index: 1;
   top: 0;
   position: fixed;
   border: none;
@@ -110,21 +119,33 @@ svg {
     color: $orange;
   }
 
-  & .active, & a:hover {
+  & .active {
     background-color: $orange;
+    color: $white;
+  }
+
+  & a:hover {
+    background-color: $yellow;
     color: $white;
   }
 }
 
 .project-container {
   display: flex;
+  width: 20rem;
 
   & a {
     text-align: center;
   }
 
   & img {
-    // max-width: 20rem;
-    max-height: 25rem;
+    width: 12rem;
+  }
+}
+
+.gallery {
+  & img{
+    max-width: 30%;
+    margin: 0;
   }
 }
