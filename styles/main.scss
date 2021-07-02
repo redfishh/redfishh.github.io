@@ -46,6 +46,7 @@ a {
   &:hover {
     color: $yellow;
     // opacity: 0.85;
+    transition: 0.3s;
   }
 }
 
@@ -62,14 +63,20 @@ figcaption {
   padding-top: 0;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
   @include header-style;
+}
+
+h1, h2 {
   color: $redOrange;
 }
 
-h3, h4 {
-  @include header-style;
+h3 {
   color: $lightOrange;
+}
+
+h4 {
+  color: $yellow;
 }
 
 img {
@@ -87,6 +94,30 @@ p {
     font-weight: bold;
     font-style: normal;
   }
+
+  & a {
+    margin: auto;
+  }
+}
+
+ul {
+  @include text-style;
+  list-style: none;
+
+  & em {
+    color: $orange;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  & li::before {
+    content: "\2022";
+    color: $yellow;
+    font-weight: bold;
+    display: inline-block;
+    width: 1rem;
+  }
+
 }
 
 svg {
@@ -136,10 +167,23 @@ svg {
 
   & a {
     text-align: center;
+    font-size: .85rem;
+  }
+
+  & img:hover{
+    opacity: 0.7;
+  }
+
+  & p {
+    line-height: 1rem;
   }
 
   & img {
     width: 12rem;
+  }
+
+  & :hover {
+    transition: 0.3s;
   }
 }
 
