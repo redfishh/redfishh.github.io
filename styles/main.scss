@@ -90,7 +90,7 @@ p {
   max-width: 80%;
 
   & em {
-    color: $orange;
+    color: $yellow;
     font-weight: bold;
     font-style: normal;
   }
@@ -105,7 +105,7 @@ ul {
   list-style: none;
 
   & em {
-    color: $orange;
+    color: $yellow;
     font-weight: bold;
     font-style: normal;
   }
@@ -120,8 +120,16 @@ ul {
 
 }
 
-svg {
+svg, iframe,video {
   margin: 1rem;
+  width: 80%;
+}
+
+blockquote {
+  @include text-style;
+  margin-left: 3rem;
+  margin-right: 4rem;
+  color: $redOrange;
 }
 
 // classes
