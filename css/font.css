@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Rubik';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/Rubik_Vinyl/RubikVinyl-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Special Elite';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/Special_Elite/SpecialElite-Regular.ttf');
+}
+
