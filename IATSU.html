@@ -12,11 +12,35 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/modal.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <link rel="icon"
           type="image/png"
           href="">
 
+    <script> 
+      /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function navMenu() {
+            var x = document.getElementById("myNav");
+  
+            if (x.className === "nav") {
+              x.className += " responsive";
+            } else {
+              x.className = "nav";
+            }
+          }
+      </script>
+  
+      <script>
+        function changeIcon(x) {
+          if (x.className == "fa fa-bars") {
+            x.className = "fa fa-times";
+          } else {
+            x.className = "fa fa-bars";
+          }
+        }
+      </script>
 
   </head>
 
@@ -24,11 +48,13 @@
 
   <body>
 
-    <nav>
+    <nav class="nav" id="myNav">
       <a href="index.html">home</a>
       <a href="projects.html" class="active">projects</a>
       <a href="photography.html">photography</a>
       <a href="aboutme.html">about</a>
+      <a href="javascript:void(0);" class="icon" onclick="navMenu()">
+        <i onclick="changeIcon(this)" class="fa fa-bars" id="icon"></i></a>
     </nav>
     
     <div class="container">
@@ -53,9 +79,9 @@
 
         <div class="box">
 
-            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="650" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FOOtYhfk9RW6SrukL4QLJ1H%2FIATSU-fb-profile%252Fcover-images%3Fnode-id%3D0%253A1%26t%3DVt9XqlhkkZQ1qo9A-1" allowfullscreen></iframe>
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FOOtYhfk9RW6SrukL4QLJ1H%2FIATSU-fb-profile%252Fcover-images%3Fnode-id%3D0%253A1%26t%3DVt9XqlhkkZQ1qo9A-1" allowfullscreen></iframe>
 
-            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="650" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FycOnoMVVnmA5TKqXItmBjd%2FIATSU-event-material%3Fnode-id%3D0%253A1%26t%3D2wAAFwBwlZo1V6Fk-1" allowfullscreen></iframe>
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FycOnoMVVnmA5TKqXItmBjd%2FIATSU-event-material%3Fnode-id%3D0%253A1%26t%3D2wAAFwBwlZo1V6Fk-1" allowfullscreen></iframe>
             
         </div>
 
