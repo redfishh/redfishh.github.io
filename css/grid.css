@@ -24,6 +24,7 @@
     padding: 0;
     margin: auto;
     width: 100%;
+    flex-direction: column;
   }
 
   .nav a {
@@ -33,6 +34,7 @@
   .nav a.icon {
     float: right;
     display: block;
+    align-self: flex-end;
   }
 
   .nav.responsive a.icon {
