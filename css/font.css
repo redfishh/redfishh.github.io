@@ -19,3 +19,10 @@
     src: url('../fonts/Special_Elite/SpecialElite-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'Plastun';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/Plastun/Plastun Caps Textured.ttf') format('truetype');
+}
+

@@ -2,12 +2,13 @@
 $bodyFont: 'Roboto';
 $headerFont: 'Rubik';
 $subheaderFont: 'Special Elite';
+$navFont: 'Plastun';
 
 //colours
-$red: rgb(179, 18, 18);
-$orange: rgb(218, 118, 26);
-$offBlack: rgb(53, 46, 46);
-$yellow: rgb(226, 180, 27);
+$red: rgb(255, 132, 132);
+$orange: rgb(255, 202, 151);
+$offBlack: rgb(26, 23, 23);
+$yellow: rgb(255, 216, 89);
 $white: rgb(243, 243, 243);
 
 //mixins
@@ -20,7 +21,7 @@ $white: rgb(243, 243, 243);
 }
 
 @mixin text-style {
-    line-height: 2rem;
+    line-height: 3rem;
     margin: 1rem;
 }
   
@@ -35,17 +36,22 @@ $white: rgb(243, 243, 243);
 }
 
 nav {
+    font-family: $navFont;
     position: fixed;
     display: flex;
     overflow: hidden;
     border: none;
     z-index: 1;
-    background-color: $white;
+    background-color: $offBlack;
     top: 0;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    font-size: 3rem;
+    // padding-top: 2rem;
+    // padding-bottom: 2rem;
+    font-size: 2rem;
     width: 100%;
+    
+    a {
+        @include text-style;
+    }
 }
 
 nav .icon {
@@ -58,10 +64,10 @@ nav .icon {
 
 body {
     @include bodyText;
-    @include margins;
-    @include text-style;
-    background-color: rgb(243, 243, 243);
-    color: $offBlack;
+    // @include margins;
+    // @include text-style;
+    background-color: $offBlack;
+    color: $white;
 }
 
 em {
@@ -71,12 +77,13 @@ em {
 
 a {
     text-decoration: none;
-    color: $offBlack;
-    font-weight: bold;
-    @include text-style;
+    color: $white;
+    font-weight: bold; 
+    // @include text-style;
 
     &:hover {
         color: $red;
+        font-size: larger;
         // opacity: 0.5;
         transition: 0.3s;
     }  
@@ -88,30 +95,39 @@ a {
 }
 
 ul {
+    @include margins;
+    @include text-style;
     list-style-type: none;
-    padding: 0;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    // padding: 0;
 }
 
 h2 {
     @include text-style;
+    @include margins;
     font-family: $subheaderFont;
 }
 
 h3 {
     @include headerText;
+    @include margins;
     transform: rotate(-2deg);
-    font-size: 2rem;
+    font-size: 3rem;
+    line-height: 3rem;
     margin: 0;
 }
 
 h4 {
+    @include margins;
     font-family: $bodyFont;
 }
 
 h1 {
     @include headerText;
+    @include margins;
     font-size: 5rem;
-    color: $offBlack;
+    color: $white;
     // transform: rotate(-5deg);
 
     &:hover {
@@ -121,24 +137,34 @@ h1 {
 }
 
 p {
-    font-size: 1.1rem;
+    @include margins;
+    @include text-style;
+    font-size: 1.5rem;
     padding-top: 1rem;
 }
 
 figcaption {
+    @include text-style;
     font-size: 1rem;
+    font-weight: 900;
     padding-bottom: 1rem;
+}
+
+figure {
+    display: flex;
+    flex-flow: column;
 }
 
 .links {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    @include margins;
 
     & a {
         text-decoration: none;
         font-size: 3rem;
-        color: $offBlack;
+        color: $white;
         font-weight: bold;
         @include text-style;
 
@@ -167,41 +193,76 @@ img {
     max-width: auto;
 }
 
-.gallery {
-    margin-top: 5rem;
-    display: flex;
-    flex-flow: row wrap;
+.myImages {
+    margin-bottom: 1rem;
+}
+
+// .gallery {
+//     // margin-top: 6rem;
+//     // display: flex;
+//     // flex-flow: row wrap;
+//     // padding: 0;
+
+//     // & .galleryImg{
+//     //     flex: 20%;
+//     //     max-width: 30%;
+//     // }
   
-    & img{
-        align-self: flex-start;
+//     & img{
+//         align-self: flex-start;
+//         width: 100%;
+//         margin: 0;
+//         // padding: .5rem;
+//     }
+//   }
+
+ .link-box {
+
+    position: relative;
+    width: 50%;
+
+    img {
         max-width: 100%;
-        height: 15rem;
-        margin: 0;
-        padding: .5rem;
-    }
-  }
-
-  .link-box {
-    text-align: center;
-    align-self: flex-start;
-    padding: .5rem;
-
-    & img{
-        max-width: 100%;
-        height: 20rem;
-    }
-
-    & p {
-        width: 20rem;
-        padding-top: 0;
-        margin-left: 1.5rem;
-        line-height: 1.5rem;
+        height: auto;
+        display: block;
     }
 
     & :hover {
-        opacity: 0.5;
-        transition: 0.5s;
+        opacity: 1;
     }
+    
+    & .opacity {
+        opacity: 1;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: $red;
+}
+
+.linkText {
+    color: $white;
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+  .links {
+    font-family: $navFont;
   }
 
   iframe {

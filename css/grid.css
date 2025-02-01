@@ -6,12 +6,25 @@
   display: flex;
   flex-wrap: wrap;
   align-items: top;
+  margin-top: 5rem;
 }
 
 .container .box {
   flex-grow: 1;
   flex-basis: 100%;
-  padding: 1rem;
+  /* padding: 1rem; */
+}
+
+.gallery {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.gallery .galleryImg .link-box {
+  flex-grow: 1;
+  flex-basis: 100%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -50,51 +63,70 @@
     text-align: right;
   }
 
-  .container {
+  .container .gallery {
     margin-top: 5rem;
     display: flex;
     flex-flow: column wrap;
   }
 
   .container .box {
-    flex-basis: 50%;
-    margin: 1rem;
-    padding: 1rem;
+    flex-basis: 100%;
+    /* margin: 1rem;
+    padding: 1rem; */
   }
 
-  .gallery {
-    display: flex;
-    flex-flow: column wrap;
+  .gallery .galleryImg {
+    flex-basis: 100%;
+    /* padding: 1rem; */
   }
 
+  .gallery .link-box {
+    flex-basis: 100%;
+  }
 }
 
 @media only screen and (min-width: 600px) {
 
 
-  .container {
+  .container .gallery {
     margin-top: 5rem;
   }
 
-  .container .box {
+  .container .box  {
     flex-basis: 33.333%;
     
+  }
+
+  .gallery .galleryImg {
+    flex-basis: 33.333%;
+  }
+
+  .gallery .link-box {
+    flex-basis: 100%;
   }
 
 }
 
 @media only screen and (min-width: 992px) {
 
-  .container {
+  .container .gallery {
     margin: auto;
-    width: 95%;
-    margin: 1rem;
+    width: 100%;
+    /* margin: 1rem;
     padding: 1rem;
-    margin-top: 5rem; 
+    margin-top: 5rem;  */
   }
 
   .container .box {
     flex-basis: 20%;
+  }
+
+  .gallery .galleryImg {
+    flex-basis: 20%;
+  }
+  
+  .gallery .link-box {
+    flex-basis: 50%;
   }
 
 }
