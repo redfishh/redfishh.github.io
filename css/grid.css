@@ -83,6 +83,10 @@
   .gallery .link-box {
     flex-basis: 100%;
   }
+
+  .links a {
+    font-size: 2em;
+  }
 }
 
 @media only screen and (min-width: 600px) {

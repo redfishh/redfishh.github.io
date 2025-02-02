@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DLEE</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/modal.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="icon" type="image/png" href="">
+
+    <script>
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function navMenu() {
+            var x = document.getElementById("myNav");
+
+            if (x.className === "nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav";
+            }
+        }
+    </script>
+
+    <script>
+        function changeIcon(x) {
+            if (x.className == "fa fa-bars") {
+                x.className = "fa fa-times";
+            } else {
+                x.className = "fa fa-bars";
+            }
+        }
+    </script>
+
+</head>
+
+
+
+<body>
+
+    <nav class="nav" id="myNav">
+        <a href="index.html">home</a>
+        <a href="projects.html" class="active">projects</a>
+        <a href="photography.html">photography</a>
+        <a href="aboutme.html">about</a>
+        <a href="javascript:void(0);" class="icon" onclick="navMenu()">
+            <i onclick="changeIcon(this)" class="fa fa-bars" id="icon"></i></a>
+    </nav>
+
+    <div class="container">
+        <div class="box">
+            <h3>Contrasts: Painting a Sentimental Tribute (academic)</h3>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="box">
+            
+            <h2>
+                role
+            </h2>
+            <p>
+                Director of Videography, Graphic Designer
+            </p>
+
+            <h2>
+                timeframe
+            </h2>
+            <p>three months</p>
+
+            <p>
+                A poetry video + documentary style response combination made in collaboration with Donna Seto, a local
+                Vancouver poet, to adapt her poem, Contrasts, to film.
+            </p>
+
+            <p>
+                This film project was made for the course IAT344: Moving Images. In this project, my team and I was
+                given the opportunity to collaborate with a local poet and create a short documentary regarding the
+                meaning of the poem. In addition to videography, I was to design our press kit materials.
+            </p>
+
+            <p>
+
+            </p>
+
+            <ul>
+                <li><em>Awards won:</em></li>
+                <li>IAT344 Fall 2022 Best Sound (Documentary)</li>
+                <li>IAT344 Fall 2022 Audience Choice (Documentary)</li>
+                <li>IAT344 Fall 2022 Best Press Kit (Across All Projects)</li>
+            </ul>
+
+
+        </div>
+
+        <div class="box">
+
+            <h2>
+                tools used
+            </h2>
+            <ul>
+                <li>Final Cut Pro</li>
+                <li>Figma</li>
+                <li>Sony Digital Cameras</li>
+            </ul>
+        </div>
+
+
+    </div>
+
+    <div class="container">
+        <div class="box">
+
+            <iframe src="https://www.youtube.com/embed/onTWwH0yGIQ?si=M3cPqlIw1FJAz7Yk" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="box">
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);"
+                src="https://embed.figma.com/proto/qA0BON8Hs8SjoWSqPKCSL7/Contrasts?page-id=0%3A1&node-id=1-2&p=f&viewport=718%2C525%2C0.21&scaling=min-zoom&content-scaling=fixed&embed-host=share"
+                allowfullscreen></iframe>
+        </div>
+
+        <div class="box">
+            <img src="img\contrasts\contrastsposter.png" id="myImg" class="myImages">
+        </div>
+
+        <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+
+            <script src="js/modal.js"></script>
+
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

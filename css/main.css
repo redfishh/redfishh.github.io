@@ -9,7 +9,7 @@ nav {
   z-index: 1;
   background-color: rgb(26, 23, 23);
   top: 0;
-  font-size: 2rem;
+  font-size: 2em;
   width: 100%;
 }
 nav a {
@@ -43,7 +43,6 @@ a {
 }
 a:hover {
   color: rgb(255, 132, 132);
-  font-size: larger;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -71,8 +70,6 @@ ul {
 h2 {
   line-height: 3rem;
   margin: 1rem;
-  margin: 1rem;
-  padding: 1rem;
   font-family: "Special Elite";
 }
 
@@ -144,11 +141,10 @@ figure {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 1rem;
-  padding: 1rem;
 }
 .links a {
   text-decoration: none;
-  font-size: 3rem;
+  font-size: 3em;
   color: rgb(243, 243, 243);
   font-weight: bold;
   line-height: 3rem;
@@ -172,6 +168,8 @@ img {
 
 .selfimg {
   max-width: auto;
+  margin: 1rem;
+  padding: 1rem;
 }
 
 .myImages {
@@ -210,6 +208,7 @@ img {
 
 .linkText {
   color: rgb(243, 243, 243);
+  font-family: "Special Elite";
   font-size: 3em;
   position: absolute;
   top: 50%;
