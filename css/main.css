@@ -1,5 +1,4 @@
 nav {
-  font-family: "Plastun";
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7,9 +6,9 @@ nav {
   overflow: hidden;
   border: none;
   z-index: 1;
-  background-color: rgb(26, 23, 23);
+  background-color: rgb(244, 244, 244);
   top: 0;
-  font-size: 2em;
+  font-size: 3.5em;
   width: 100%;
 }
 nav a {
@@ -27,8 +26,8 @@ nav .icon {
 
 body {
   font-family: "Roboto";
-  background-color: rgb(26, 23, 23);
-  color: rgb(243, 243, 243);
+  background-color: rgb(244, 244, 244);
+  color: rgb(66, 66, 66);
 }
 
 em {
@@ -38,7 +37,7 @@ em {
 
 a {
   text-decoration: none;
-  color: rgb(243, 243, 243);
+  color: rgb(66, 66, 66);
   font-weight: bold;
 }
 a:hover {
@@ -70,15 +69,13 @@ ul {
 h2 {
   line-height: 3rem;
   margin: 1rem;
-  font-family: "Special Elite";
+  font-family: "Coolvetica";
 }
 
 h3 {
-  font-family: "Rubik";
   margin: 1rem;
   padding: 1rem;
-  -webkit-transform: rotate(-2deg);
-          transform: rotate(-2deg);
+  font-family: "Coolvetica";
   font-size: 3rem;
   line-height: 3rem;
   margin: 0;
@@ -91,16 +88,12 @@ h4 {
 }
 
 h1 {
-  font-family: "Rubik";
+  font-family: "Young Serif";
+  letter-spacing: 0.25rem;
   margin: 1rem;
   padding: 1rem;
   font-size: 5rem;
-  color: rgb(243, 243, 243);
-}
-h1:hover {
-  color: rgb(255, 132, 132);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  color: rgb(66, 66, 66);
 }
 
 p {
@@ -145,7 +138,7 @@ figure {
 .links a {
   text-decoration: none;
   font-size: 3em;
-  color: rgb(243, 243, 243);
+  color: rgb(66, 66, 66);
   font-weight: bold;
   line-height: 3rem;
   margin: 1rem;
@@ -203,13 +196,13 @@ img {
   opacity: 0;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
-  background-color: rgb(255, 132, 132);
+  background-color: rgb(255, 216, 89);
 }
 
 .linkText {
-  color: rgb(243, 243, 243);
-  font-family: "Special Elite";
-  font-size: 3em;
+  color: rgb(244, 244, 244);
+  font-family: "Coolvetica";
+  font-size: 2em;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -218,8 +211,9 @@ img {
   text-align: center;
 }
 
-.links {
-  font-family: "Plastun";
+.centredText {
+  text-align: center;
+  padding-bottom: 5rem;
 }
 
 iframe {

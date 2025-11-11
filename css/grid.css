@@ -16,10 +16,10 @@
 }
 
 .gallery {
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
+  /* padding: 1rem; */
 }
 
 .gallery .galleryImg .link-box {
@@ -106,7 +106,7 @@
   }
 
   .gallery .link-box {
-    flex-basis: 100%;
+    flex-basis: 50%;
   }
 
 }
@@ -130,7 +130,7 @@
   }
   
   .gallery .link-box {
-    flex-basis: 50%;
+    flex-basis: 25%;
   }
 
 }

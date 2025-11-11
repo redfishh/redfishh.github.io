@@ -1,19 +1,21 @@
 //fonts
 $bodyFont: 'Roboto';
-$headerFont: 'Rubik';
-$subheaderFont: 'Special Elite';
-$navFont: 'Plastun';
+$headerFont: 'Young Serif';
+$subheaderFont: 'Coolvetica';
+// $navFont: 'Plastun';
 
 //colours
 $red: rgb(255, 132, 132);
 $orange: rgb(255, 202, 151);
-$offBlack: rgb(26, 23, 23);
+$offBlack: rgb(66, 66, 66);
 $yellow: rgb(255, 216, 89);
-$white: rgb(243, 243, 243);
+$white: rgb(244, 244, 244);
+$blue: rgb(138, 238, 221);
 
 //mixins
 @mixin headerText {
     font-family: $headerFont;
+    letter-spacing: .25rem;
 }
 
 @mixin bodyText {
@@ -36,17 +38,18 @@ $white: rgb(243, 243, 243);
 }
 
 nav {
-    font-family: $navFont;
+    // font-family: $navFont;
     position: fixed;
     display: flex;
     overflow: hidden;
     border: none;
     z-index: 1;
-    background-color: $offBlack;
+    background-color: $white;
     top: 0;
+    // padding: 1rem;
     // padding-top: 2rem;
     // padding-bottom: 2rem;
-    font-size: 2em;
+    font-size: 3.5em;
     width: 100%;
 
     a {
@@ -66,8 +69,8 @@ body {
     @include bodyText;
     // @include margins;
     // @include text-style;
-    background-color: $offBlack;
-    color: $white;
+    background-color: $white;
+    color: $offBlack;
 }
 
 em {
@@ -77,7 +80,7 @@ em {
 
 a {
     text-decoration: none;
-    color: $white;
+    color: $offBlack;
     font-weight: bold;
     // @include text-style;
 
@@ -110,9 +113,8 @@ h2 {
 }
 
 h3 {
-    @include headerText;
     @include margins;
-    transform: rotate(-2deg);
+    font-family: $subheaderFont;
     font-size: 3rem;
     line-height: 3rem;
     margin: 0;
@@ -127,13 +129,7 @@ h1 {
     @include headerText;
     @include margins;
     font-size: 5rem;
-    color: $white;
-    // transform: rotate(-5deg);
-
-    &:hover {
-        color: $red;
-        transition: 0.3s;
-    }
+    color: $offBlack;
 }
 
 p {
@@ -165,7 +161,7 @@ figure {
     & a {
         text-decoration: none;
         font-size: 3em;
-        color: $white;
+        color: $offBlack;
         font-weight: bold;
         @include text-style;
 
@@ -248,13 +244,13 @@ img {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: $red;
+    background-color: $yellow;
 }
 
 .linkText {
     color: $white;
     font-family: $subheaderFont;
-    font-size: 3em;
+    font-size: 2em;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -264,8 +260,9 @@ img {
     text-align: center;
 }
 
-.links {
-    font-family: $navFont;
+.centredText {
+    text-align: center;
+    padding-bottom: 5rem;
 }
 
 iframe {
