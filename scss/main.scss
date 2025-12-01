@@ -175,11 +175,25 @@ figure {
 
 .contact {
 
+    @include margins;
+    font-size: 4rem;
+    
+
     a {
         text-decoration: underline;
-        margin: 1rem;
         padding: 0;
+        // color: $red;
+
+        & :hover {
+            color: $yellow;
+            transition: 0.3s;
+        }
     }
+}
+
+em {
+    color: $red;
+    font-weight: 900;
 }
 
 img {

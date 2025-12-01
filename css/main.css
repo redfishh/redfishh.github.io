@@ -149,10 +149,24 @@ figure {
   transition: 0.3s;
 }
 
+.contact {
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 4rem;
+}
 .contact a {
   text-decoration: underline;
-  margin: 1rem;
   padding: 0;
+}
+.contact a :hover {
+  color: rgb(255, 216, 89);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+em {
+  color: rgb(255, 132, 132);
+  font-weight: 900;
 }
 
 img {
