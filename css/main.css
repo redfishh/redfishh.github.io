@@ -24,6 +24,11 @@ nav .icon {
   color: rgb(255, 202, 151);
 }
 
+.title {
+  margin: 1rem;
+  padding: 1rem;
+}
+
 body {
   font-family: "Roboto";
   background-color: rgb(244, 244, 244);
@@ -47,12 +52,12 @@ a:hover {
 }
 
 ::-moz-selection {
-  background-color: rgb(255, 132, 132);
+  background-color: rgb(255, 216, 89);
   color: white;
 }
 
 ::selection {
-  background-color: rgb(255, 132, 132);
+  background-color: rgb(255, 216, 89);
   color: white;
 }
 
@@ -97,8 +102,6 @@ h1 {
 }
 
 p {
-  margin: 1rem;
-  padding: 1rem;
   line-height: 3rem;
   margin: 1rem;
   font-size: 1.5rem;
@@ -152,7 +155,7 @@ figure {
 .contact {
   margin: 1rem;
   padding: 1rem;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 .contact a {
   text-decoration: underline;

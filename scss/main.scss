@@ -65,6 +65,10 @@ nav .icon {
     color: $orange;
 }
 
+.title {
+    @include margins;
+}
+
 body {
     @include bodyText;
     // @include margins;
@@ -93,7 +97,7 @@ a {
 }
 
 ::selection {
-    background-color: $red;
+    background-color: $yellow;
     color: white;
 }
 
@@ -133,7 +137,7 @@ h1 {
 }
 
 p {
-    @include margins;
+    // @include margins;
     @include text-style;
     font-size: 1.5rem;
     padding-top: 1rem;
@@ -176,7 +180,7 @@ figure {
 .contact {
 
     @include margins;
-    font-size: 4rem;
+    font-size: 2rem;
     
 
     a {
